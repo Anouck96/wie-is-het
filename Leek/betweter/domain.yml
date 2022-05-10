@@ -1,0 +1,96 @@
+version: '3.0'
+session_config:
+  session_expiration_time: 60
+  carry_over_slots_to_new_session: true
+intents:
+- greet
+- goodbye
+- Ja
+- Nee
+- pnumber
+- knock_knock
+- bot_challenge
+- correct_guess
+- wrong_guess
+- bad_hair
+- good_hair
+- incorrect_gender
+- correct_gender
+- incorrect_oogkleur
+- incorrect_acc
+- correct_oogkleur
+- incorrect_huidskleur
+- correct_acc
+- correct_huidskleur
+responses:
+  utter_greet:
+  - text: "Hallo. Wat leuk dat je er bent! \ \nIk ben Betweter in opleiding 🤓. Ik ken het Wie-is-het spel nog niet zo goed. \ \nDoor vandaag samen met jou te spelen hoop ik meer te leren over Wie-is-het."
+  utter_jeej:
+  - image: https://media.giphy.com/media/5nRnBxwr5ZamZeeAJ2/giphy.gif
+    text: Laten we beginnen!
+  utter_goodbye:
+  - text: Doei!
+  utter_pnumber:
+  - buttons:
+    - payload: /Ja
+      title: Ja
+    - payload: /Nee
+      title: Nee
+    text: Bij binnenkomst heb je een participantnummer ontvangen, klopt dat?
+  utter_get_pnumber:
+    - text: Wat is je participantnummer?
+  utter_not_correctPnumber:
+    - text: "Klopt het ingetikte participantnummer? \ \n Zo niet, spreek dan even een begeleider aan."
+  utter_bord:
+  - text: In dat geval kan je het beste even een van de begeleiders aanspreken voordat je verder gaat.
+  utter_ask_partnum:
+  - text: Wat is jouw participantnummer?
+  utter_startgame:
+  - text: Ik weet niet alles over het spel, maar ik kan je wel vertellen hoe het spel werkt.
+  utter_havebord:
+  - buttons:
+    - payload: /Ja
+      title: Ja
+    - payload: /Nee
+      title: Nee
+    text: Heb je het Wie-is-het bord gekregen 😄?
+  utter_hooray:
+  - image: https://i.ibb.co/cDLwqS6/LISA.png
+    text: "WAT GOED!! Je hebt gewonnen van mij. Ik heb veel van je geleerd😃."
+  utter_start:
+  - text: "Ik heb een personage in mijn gedachten en jij moet raden wie! \ \nIk weet heel veel over het Wie-is-het spel. Ik zal jou nu uitleggen hoe het spel werkt."
+  utter_start2:
+  - text: Je zult het vast heel goed doen!!
+  utter_rules:
+  - text: Het werkt zo; je kunt raden welk personage ik gekozen heb door ja/nee vragen te stellen over de kenmerken van de personages.
+  utter_rules2:
+  - text: "Zometeen krijg je vijf kenmerken waarover je een vraag kan stellen. \ \nJe kunt iedere keer aangeven over welk kenmerk je een vraag wilt stellen. 😃 \ \nAls je weet welk personage het is kan je dit op elk moment zeggen."
+  utter_rules4:
+  - text: Probeer zo snel mogelijk het personage te raden. Je tijd wordt bijgehouden ⏱. Ik weet zeker dat je mij zult verslaan!
+  utter_clear:
+  - buttons:
+    - payload: /Ja
+      title: Ja
+    - payload: /Nee
+      title: Nee
+    text: Heb jij alles begrepen? Reageer dan met "Ja" om verder te gaan.
+  utter_quest:
+  - text: Je kunt een vraag stellen over haarkleur, geslacht, oogkleur, huidskleur of accessoires (ook gezichtsbeharing).
+  utter_bad:
+  - text: Helaas, dat is niet het goede personage.
+  utter_correct:
+  - text: Dat klopt!
+  utter_incorrect:
+  - text: Helaas, dat klopt niet😪.
+  utter_genq:
+  - text: Type nu je vraag!
+  utter_joke:
+  - buttons:
+    - payload: /knock_knock
+      title: Knock, knock
+    text: Het spel start zo, maar eerst.. 🚪
+  utter_jokea:
+  - image: https://media.giphy.com/media/10G4UQjEoExKuc/giphy.gif
+    text: Dat moet jij nu gaan raden haha
+actions:
+- utter_greet

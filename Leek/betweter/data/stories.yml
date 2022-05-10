@@ -1,0 +1,83 @@
+version: "3.0"
+stories:
+- story: happy path
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - action: utter_pnumber
+  - checkpoint: check_pnumber
+
+- story: handle affirm
+  steps:
+    - checkpoint: check_pnumber
+    - intent: Ja
+    - action: utter_ask_partnum
+    - intent: pnumber
+    - action: utter_not_correctPnumber
+    - checkpoint: check_continue
+
+- story: handle deny
+  steps:
+    - checkpoint: check_pnumber
+    - intent: Nee
+    - action: utter_bord
+    - checkpoint: check_continue
+
+- story: check bord
+  steps:
+    - checkpoint: check_continue
+    - action: utter_startgame
+    - action: utter_havebord
+    - checkpoint: check_bord
+
+- story: affirm bord
+  steps:
+    - checkpoint: check_bord
+    - intent: Ja
+    - checkpoint: check_rules
+
+- story: deny bord
+  steps:
+    - checkpoint: check_bord
+    - intent: Nee
+    - action: utter_bord
+    - checkpoint: check_rules
+
+- story: gamerules
+  steps:
+    - checkpoint: check_rules
+    - action: utter_start
+    - action: utter_start2
+    - action: utter_rules
+    - action: utter_rules2
+    - action: utter_rules4
+    - action: utter_clear
+    - checkpoint: check_clear
+
+- story: deny rules
+  steps:
+      - checkpoint: check_clear
+      - intent: Nee
+      - action: utter_bord
+      - action: utter_jeej
+      - checkpoint: joke
+
+- story: affirm rules
+  steps:
+      - checkpoint: check_clear
+      - intent: Ja
+      - action: utter_jeej
+      - checkpoint: joke
+
+- story: joke
+  steps:
+    - checkpoint: joke
+    - action: utter_joke
+    - checkpoint: joke_yes
+
+- story: joke_knock
+  steps:
+    - checkpoint: joke_yes
+    - intent: knock_knock
+    - action: utter_jokea
+    - action: utter_quest

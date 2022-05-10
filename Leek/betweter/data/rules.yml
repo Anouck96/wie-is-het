@@ -1,0 +1,68 @@
+version: "3.0"
+
+rules:
+
+- rule: Say goodbye anytime the user says goodbye
+  steps:
+  - intent: goodbye
+  - action: utter_goodbye
+
+- rule: End game whenever user guesses Lisa
+  steps:
+    - intent: correct_guess
+    - action: utter_hooray
+
+- rule: Say when wrong guess
+  steps:
+    - intent: wrong_guess
+    - action: utter_bad
+
+- rule: Good hair
+  steps:
+    - intent: good_hair
+    - action: utter_correct
+
+- rule: Bad hair
+  steps:
+    - intent: bad_hair
+    - action: utter_incorrect
+
+- rule: Correct Gender
+  steps:
+    - intent: correct_gender
+    - action: utter_correct
+
+- rule: Incorrect gender
+  steps:
+    - intent: incorrect_gender
+    - action: utter_incorrect
+
+- rule: Correc acc
+  steps:
+    - intent: correct_acc
+    - action: utter_correct
+
+- rule: incorrect acc
+  steps:
+    - intent: incorrect_acc
+    - action: utter_incorrect
+
+- rule: huidskleur correct
+  steps:
+    - intent: correct_huidskleur
+    - action: utter_correct
+
+- rule: huidskleur incorrect
+  steps:
+    - intent: incorrect_huidskleur
+    - action: utter_incorrect
+
+- rule: oogkleur correct
+  steps:
+    - intent: correct_oogkleur
+    - action: utter_correct
+
+- rule: oogkleur incorrect
+  steps:
+    - intent: incorrect_oogkleur
+    - action: utter_incorrect

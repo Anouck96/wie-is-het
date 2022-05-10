@@ -1,0 +1,539 @@
+version: "3.0"
+
+nlu:
+- intent: greet
+  examples: |
+    - hoi
+    - hallo
+    - hi
+    - Goedendag
+    - Goedemorgen
+    - Goedenavond
+    - moi
+    - Dag
+    - Goedemiddag
+- intent: goodbye
+  examples: |
+    - Goedemiddag
+    - Dag
+    - Zie je later
+    - Goedenacht
+    - Doei
+    - Fijne dag
+    - bye
+    - doeg
+    - doeidoei
+- intent: Ja
+  examples: |
+    - ja
+    - j
+    - inderdaad
+    - natuurlijk
+    - yes
+    - dat klinkt goed
+    - correct
+    - dat klopt
+    - oke
+    - ok
+- intent: Nee
+  examples: |
+    - no
+    - nee
+    - nooit
+    - Denk ik niet
+    - Vind ik niet
+    - n
+    - niet echt
+    - nope
+    - niet
+    - neej
+- intent: knock_knock
+  examples: |
+    - knock
+    - knock knock
+    - klop
+    - klop klop
+- intent: correct_guess
+  examples: |
+    - Lisa
+    - Is het Lisa?
+    - Ik denk Lisa
+    - Ik denk dat het Lisa is
+    - Is het personage Lisa
+    - Gaat het om Lisa?
+    - Lisa?
+    - Heb jij Lisa in gedachten?
+    - Had jij Lisa in gedachten?
+    - Heb je Lisa voor ogen?
+    - Had jij Lisa voor ogen?
+    - Ben je Lisa?
+    - Lisa!
+    - lisa
+- intent: wrong_guess
+  examples: |
+    - Max
+    - is het max
+    - ik denk dat het max is
+    - Sofie
+    - is het sofie
+    - ik denk dat het sofie is
+    - Daniël
+    - gaat het om daniel
+    - is het daniel
+    - Eric
+    - is het eric
+    - ik denk dat het eric is
+    - Lotje
+    - is het lotje
+    - ik denk dat het lotje is
+    - Bram
+    - is het bram 
+    - ik denk dat het bram is
+    - gaat het om bram
+    - Paul
+    - is het paul
+    - ik denk dat het paul is
+    - gaat het om paul
+    - Katrijn
+    - is het katrijn 
+    - ik denk het katrijn is
+    - Frank
+    - is het frank
+    - ik denk dat het frank is
+    - gaat het om frank
+    - Eva
+    - ik denk dat het eva is
+    - is het eva
+    - gaat het om eva
+    - heb jij eva voor ogen
+    - David
+    - is het david
+    - ik denk dat het david is
+    - het gaat om david
+    - Chris
+    - is het chris
+    - ik denk dat het chris is
+    - gaat het om chris
+    - Maria
+    - is het maria
+    - ik denk dat het maria is
+    - gaat het om maria
+    - Joris
+    - is het joris
+    - Anne
+    - is het anne
+    - ik denk dat het anne is
+    - het gaat om anne
+    - gaat het om anne
+    - Julia
+    - is het julia
+    - ik denk dat het julia is
+    - het gaat om julia
+    - Sara
+    - Gaat het om Sara
+    - Is het sara
+    - ik denk dat het sara is
+    - Cato
+    - gaat het om cato
+    - is het cato
+    - ik denk dat het cato is
+    - ben je cato
+    - Rogier
+    - ik denk dat het rogier is
+    - gaat het om rogier
+    - is het rogier
+    - ben je rogier
+    - Bill
+    - ik denk dat het bill is
+    - gaat het om bill
+    - is het bill
+    - ben je bill
+    - Max
+    - Ben je Max.
+    - gaat het om max
+    - ik denk dat het max is
+    - Gaat het om Joris
+    - Heb je Sara voor ogen?
+    - Gaat het om Julia?
+    - Ik denk dat het Cato is
+    - Ik denk dat het om David gaat
+- intent: good_hair
+  examples: |
+    - blonde
+    - blond
+    - heeft het personage blond haar
+    - heeft zij blond haar
+    - is zij blond
+    - is het personage blond
+    - blond haar
+    - blonde haarkleur
+    - heeft zij een blonde haarkleur
+    - heeft hij een blonde haarkleur
+    - heeft het personage een blonde haarkleur
+    - geel
+    - geel haar
+    - gele haarkleur
+    - heeft ze blond haar?
+    - heb je blond haar?
+    - lichte haarkleur
+    - heeft ze een lichte haarkleur?
+    - heeft hij een lichte haarkleur?
+- intent: bad_hair
+  examples: |
+    - zwart
+    - bruin
+    - wit
+    - grijs
+    - rood
+    - Een bruine haarkleur?
+    - Een zwarte haarkleur?
+    - Een witte haarkleur?
+    - Een grijze haarkleur?
+    - Een rode haarkleur?
+    - bruine
+    - zwarte
+    - grijze
+    - witte
+    - rode
+    - oranje
+    - heeft zij zwart haar
+    - heeft hij zwart haar
+    - heeft zij bruin haar
+    - heeft hij bruin haar
+    - heeft zij wit haar
+    - heeft hij wit haar
+    - heeft zij grijs haar
+    - heeft hij grijs haar
+    - heeft zij rood haar
+    - heeft hij rood haar
+    - rood haar
+    - zwart haar
+    - bruin haar
+    - wit haar
+    - grijs haar
+    - heb je wit haar
+    - heb je grijs haar?
+    - heb je zwart haar
+    - heb je rood haar?
+- intent: correct_gender
+  examples: |
+    - vrouw
+    - Is het een vrouw?
+    - Is het personage een vrouw?
+    - Is het een zij?
+    - Is het vrouwelijk?
+    - Is het een vrouwelijk personage?
+    - Is zij vrouwelijk?
+    - vrouwelijk
+    - gaat het om een vrouw
+    - is haar geslacht vrouwelijk
+    - is het geslacht vrouwelijk
+    - geslacht vrouw
+    - vrouwelijk geslacht
+    - meisje
+    - is het een meisje
+    - is het personage een meisje
+    - meid
+    - juffrouw
+    - dame
+    - meiske
+    - mevrouw
+    - is het een mevrouw
+    - is het een vrouw
+    - is ze een vrouw
+    - ben je een vrouw
+    - is deze persoon een vrouw
+    - Bent u een vrouw
+- intent: incorrect_gender
+  examples: |
+    - man
+    - mannelijk
+    - geslacht man
+    - mannelijk geslacht
+    - is het een man
+    - is het een hij
+    - is het personage mannelijk
+    - is het personage een man
+    - gaat het om een man
+    - is het geslacht mannelijk
+    - is het geslacht een man
+    - jongetje
+    - is het een jongetje
+    - is het personage een jongetje
+    - gaat het om een jongetje
+    - jongen
+    - is het een jongen
+    - is het personage een jongen
+    - gaat het om een jongen
+    - kereltje
+    - is het een kerel
+    - is het een kereltje
+    - kerel
+    - is het een knaap
+    - knaap
+    - knul
+    - is het een knul
+    - vent
+    - is het een vent
+    - is het een ventje
+    - mannelijk personage
+    - bent u een man?
+    - Ben ik een man
+    - is hij een man
+- intent: correct_acc
+  examples: |
+    - Geen accessoire
+    - Hij heeft geen accessoire
+    - Zij heeft geen accessoire
+    - geen enkele accessoire
+    - niet accessoire
+    - het personage heeft geen accessoire
+    - geen accessoires
+    - het personage heeft geen accessoires
+    - heeft ze geen accessoires
+    - heb ik geen accessoires
+    - heeft deze persoon geen accessoires
+- intent: incorrect_acc
+  examples: |
+    - bril
+    - heeft het personage een bril
+    - heeft zij een bril
+    - heeft hij een bril
+    - is er een bril
+    - heeft hij een pet
+    - heeft zij een pet
+    - pet
+    - heeft hij een hoed
+    - heeft zij een hoed
+    - hoed
+    - is er een pet
+    - oorbellen
+    - heeft het personage oorbellen
+    - heeft zij oorbellen
+    - heeft hij oorbellen
+    - heeft het personage een snor
+    - heeft hij een snor
+    - heeft zij een snor
+    - baard
+    - een baard
+    - heeft ze een staart
+    - staart
+    - heeft jouw personage een pet
+    - heeft je personage oorbellen
+    - heeft het personage een baard
+    - heeft hij een baard
+    - heeft zij een baard
+    - heeft hij gezichtsbeharing
+    - is er gezichtsbeharing
+    - heeft het personage gezichtsbeharing
+    - heb ik een bril
+    - heb ik een pet
+    - heb ik oorbellen
+    - heb ik een baard
+    - heb ik gezichtsbeharing
+    - heb ik een staart
+    - heb je een bril
+    - heb je een pet
+    - heb je oorbellen
+    - heb je een baard
+    - heb je gezichtsbeharing
+    - heb je een staart
+    - heeft de persoon een muts op
+    - heeft ze een muts op
+    - heeft hij een muts op
+    - muts?
+- intent: correct_huidskleur
+  examples: |
+    - donkere huidskleur
+    - heeft het personage een donkere huidskleur
+    - heeft het personage een zwarte huidskleur
+    - donker
+    - getint
+    - getinte huidskleur
+    - heeft het personage een getinte huidskleur
+    - is het personage getint
+    - is zij getint
+    - is hij getint
+    - zwart
+    - donkergekleurde huidskleur
+    - gekleurde huidskleur
+    - heeft het personage een gekleurde huidskleur
+    - is het personage zwart van huidskleur
+    - is het personage donker van huidskleur
+    - is het personage gekleurd van huidskleur
+    - is het personage gekleurd
+    - ben je getint
+    - ben je gekleurd
+    - ben je zwart
+    - ben je donker
+    - ben ik getint
+    - ben ik gekleurd
+    - ben ik zwart
+    - ben ik donker
+- intent: incorrect_huidskleur
+  examples: |
+    - licht
+    - blank
+    - wit
+    - getint
+    - geel
+    - heeft het personage een lichte huidskleur
+    - heeft het personage een blanke huidskleur
+    - heeft het personage een witte huidskleur
+    - lichte huidskleur
+    - blanke huidskleur
+    - witte huidskleur
+    - ben je licht
+    - ben je blank
+    - ben je wit
+    - ben ik blank
+    - ben ik wit
+    - ben ik blank
+- intent: correct_oogkleur
+  examples: |
+    - bruine oogkleur
+    - heeft het personage bruine ogen
+    - bruine ogen?
+    - bruine ogen
+    - heeft het personage een bruine oogkleur
+    - bruin
+    - heeft zij bruine ogen
+    - een bruine oogkleur
+    - heeft zij een bruine oogkleur
+    - heeft hij een bruine oogkleur
+    - heeft hij bruine ogen
+    - is de oogkleur bruin
+    - is de oogkleur bruin?
+    - heeft het personage bruingekleurde ogen
+    - zijn zijn ogen bruin
+    - zijn haar ogen bruin
+    - donkere ogen
+    - heeft het personage donkere ogen
+    - heb ik donkere ogen
+    - heb ik bruine ogen
+    - heb je donkere ogen
+    - heb je bruine ogen
+- intent: incorrect_oogkleur
+  examples: |
+    - blauw
+    - blauwe ogen
+    - blauwe oogkleur
+    - blauw gekleurde ogen
+    - heeft het personage blauwe ogen
+    - heeft het personage een blauw oog
+    - heeft zij blauwe ogen
+    - heeft hij blauwe ogen
+    - zijn haar ogen blauw
+    - zijn zijn ogen blauw
+    - heeft zij blauwgekleurde ogen
+    - heeft het personage blauw gekleurde ogen
+    - heeft hij blauwgekleurde ogen
+    - lichte ogen
+    - heeft ze lichte ogen
+    - heeft het personage lichte ogen
+    - heb je lichte ogen
+    - heb je blauwe ogen
+    - heb ik lichte ogen
+    - heb ik blauwe ogen
+- intent: pnumber
+  examples: |
+    - 1
+    - 2
+    - 3
+    - 4
+    - 5
+    - 6
+    - 7
+    - 8
+    - 9
+    - 10
+    - 11
+    - 12
+    - 13
+    - 14
+    - 15
+    - 16
+    - 17
+    - 18
+    - 19
+    - 20
+    - 21
+    - 22
+    - 23
+    - 24
+    - 25
+    - 26
+    - 27
+    - 28
+    - 29
+    - 30
+    - 31
+    - 32
+    - 33
+    - 34
+    - 35
+    - 36
+    - 37
+    - 38
+    - 39
+    - 40
+    - 41
+    - 42
+    - 43
+    - 44
+    - 45
+    - 46
+    - 47
+    - 48
+    - 49
+    - 50
+    - 51
+    - 52
+    - 53
+    - 54
+    - 55
+    - 56
+    - 57
+    - 58
+    - 59
+    - 60
+    - 61
+    - 62
+    - 63
+    - 64
+    - 65
+    - 66
+    - 67
+    - 68
+    - 69
+    - 70
+    - 71
+    - 72
+    - 73
+    - 74
+    - 75
+    - 76
+    - 77
+    - 78
+    - 79
+    - 80
+    - 81
+    - 82
+    - 83
+    - 84
+    - 85
+    - 86
+    - 87
+    - 88
+    - 89
+    - 90
+    - 91
+    - 92
+    - 93
+    - 94
+    - 95
+    - 96
+    - 97
+    - 98
+    - 99
+    - 100

@@ -2,7 +2,7 @@
 This is the repository with the code for the wie-is-het experiment at Night University.
 
 ## Requirements
-The code runs with the packages in the reqs.txt file.
+The code runs with the packages in the reqs.txt file. We used python 3.8.
 
 ## How to install the bots
 We have two different versions of the bots. One can be found in the "expert" directory and the other one in the "leek" directory. 
